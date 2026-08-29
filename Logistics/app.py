@@ -468,6 +468,35 @@ hr { border-color: #DCECEF !important; }
     font-size: 1.05rem;
     font-weight: 800;
 }
+
+/* ---------- Final Selectbox Text Override ---------- */
+/* Keep the light-teal selectbox background and force selected text to navy. */
+div[data-testid="stSelectbox"] div[data-baseweb="select"],
+div[data-testid="stSelectbox"] div[data-baseweb="select"] > div,
+div[data-testid="stSelectbox"] div[data-baseweb="select"] [role="combobox"],
+div[data-testid="stSelectbox"] div[data-baseweb="select"] [role="combobox"] > div,
+div[data-testid="stSelectbox"] div[data-baseweb="select"] [role="combobox"] span,
+div[data-testid="stSelectbox"] div[data-baseweb="select"] [role="combobox"] p {
+    color: #12344D !important;
+    -webkit-text-fill-color: #12344D !important;
+}
+
+/* Keep the dropdown arrow navy and its background transparent. */
+div[data-testid="stSelectbox"] div[data-baseweb="select"] svg {
+    color: #12344D !important;
+    fill: #12344D !important;
+    stroke: #12344D !important;
+    background: transparent !important;
+}
+
+/* Dropdown menu text remains navy on white. */
+div[data-baseweb="popover"] div[data-baseweb="menu"] li,
+div[data-baseweb="popover"] div[data-baseweb="menu"] li * {
+    color: #12344D !important;
+    -webkit-text-fill-color: #12344D !important;
+}
+
+/* ---------- End Final Selectbox Text Override ---------- */
 </style>
 """
 
