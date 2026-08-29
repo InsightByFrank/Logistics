@@ -20,13 +20,15 @@ APP_OWNER_NAME = "InsightbyFrank"
 LINKEDIN_URL = "http://www.linkedin.com/in/frank-agba"
 GITHUB_URL = "https://github.com/InsightByFrank/Logistics"
 
+BASE_DIR = Path(__file__).resolve().parent
+
 DASHBOARD_SCREENSHOTS = [
-    ("assets/1.png", "Customer & Order Performance"),
-    ("assets/2.png", "Shipment & Trade Flow"),
-    ("assets/3.png", "Logistics & Carrier Performance"),
+    (BASE_DIR / "assets" / "1.png", "Customer & Order Performance"),
+    (BASE_DIR / "assets" / "2.png", "Shipment & Trade Flow"),
+    (BASE_DIR / "assets" / "3.png", "Logistics & Carrier Performance"),
 ]
 
-MODEL_PATH = Path("model/logistics_clearance_models.joblib")
+MODEL_PATH = BASE_DIR / "model" / "logistics_clearance_models.joblib"
 
 REQUIRED_BATCH_COLUMNS = [
     "shipment_id", "type", "date", "product_category",
